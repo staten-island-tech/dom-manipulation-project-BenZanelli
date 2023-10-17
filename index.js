@@ -11,6 +11,9 @@ DOMSelectors.form.addEventListener("submit", function(event) {
         (item) => (item.textContent = DOMSelectors.itemname.value)
     );
 }); 
+
 function getrid() {
-    DOMSelectors.h2s.textContent.remove();
-}
+   DOMSelectors.h2s.forEach((h2) => (h2.textContent = null) ); }
+
+
+ 
