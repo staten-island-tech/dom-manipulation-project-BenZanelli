@@ -1,0 +1,33 @@
+html {
+    font-size: 23px;
+    font-family:"Mooli", Tahoma, sans-serif;
+    overflow: auto;
+}
+.forms {
+    background-color: rgb(34, 209, 142);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+    padding: 5px;
+}
+#form {
+    margin-bottom: 4px;
+}
+.input {
+    width: 30%;
+    height: 22px;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: chocolate;
+}
