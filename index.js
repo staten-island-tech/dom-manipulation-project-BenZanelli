@@ -4,22 +4,30 @@ DOMSelectors = {
     imagelink: document.querySelector("#image-link"),
     h2s: document.querySelectorAll("h2"),
     remove: document.querySelector(".remove"),
-    imtem: document.querySelector(".item"),
+    item: document.querySelector(".item"),
 };
-function addthing() {
+function addcard() {
     document.querySelector(".item").insertAdjacentHTML(
         "beforeend",
         `<div class="item">
-         <h2 id="name"></h2>
-        <img src="" alt="user entered image">
-        <button class="remove" >REMOVE</button> ]
+         <h2 id="name">${DOMSelectors.itemname.value}</h2>
+         <img src="${DOMSelectors.imagelink.value}" alt="user entered image">
+        <button class="remove"   >REMOVE</button> 
      </div>`
     );
 }
+function removecard(){
+    DOMSelectors.imagelink.remove();
+    DOMSelectors.h2s.remove();
+    DOMSelectors.remove.remove();
+}
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
+    addcard();
 }); 
-
+DOMSelectors.remove.addEventListener(".remove", function(){
+    removecard();
+})
 /* function getrid() {
    DOMSelectors.h2s.forEach((h2) => (h2.textContent = null) ); }
  */
