@@ -12,22 +12,33 @@ function addcard() {
         `<div class="item">
          <h2 id="name">${DOMSelectors.itemname.value}</h2>
          <img src="${DOMSelectors.imagelink.value}" alt="user entered image">
-        <button class="remove"   >REMOVE</button> 
+         <form action="">
+        <button class="remove">REMOVE</button> 
+        </form>
      </div>`
     );
 }
-function removecard(){
-    DOMSelectors.imagelink.remove();
-    DOMSelectors.h2s.remove();
-    DOMSelectors.remove.remove();
+function clearfield(){
+    DOMSelectors.itemname.value= "";
+    DOMSelectors.imagelink.value= "";
 }
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
     addcard();
+    clearfield();
+    element.remove(); // Removes the div with the 'div-02' id
+
+    
 }); 
-DOMSelectors.remove.addEventListener(".remove", function(){
-    removecard();
+DOMSelectors.remove.addEventListener(".remove", function(event){
+    const element = document.getElementsByClassName(".");
+    while (element.firstChild) {
+    element.removeChild(element.firstChild);
+}
 })
+
+
+
 /* function getrid() {
    DOMSelectors.h2s.forEach((h2) => (h2.textContent = null) ); }
  */

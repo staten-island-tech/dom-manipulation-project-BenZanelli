@@ -11,14 +11,21 @@ html {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
-    justify-items: center;
-    padding: 5px;
+    padding: 5px;   
+   box-shadow: 10px 7px 10px rgb(0, 0, 0);
+   justify-content: space-around;
+   transition: all .3s;
+    word-wrap: s-word;
 }
 #form {
     margin-bottom: 4px;
 }
 .input {
-    width: 30%;
+    width: 50%;
+    height: 22px;
+}
+.text {
+    width: 50%;
     height: 22px;
 }
 .item {
