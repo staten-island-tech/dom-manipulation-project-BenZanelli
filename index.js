@@ -5,18 +5,20 @@ DOMSelectors = {
     h2s: document.querySelectorAll("h2"),
     remove: document.querySelector(".remove"),
     item: document.querySelector(".item"),
+    parent: document.querySelector(".parent")
 };
 function addcard() {
-    document.querySelector(".item").insertAdjacentHTML(
+    document.querySelector(".parent").insertAdjacentHTML(
         "beforeend",
         `<div class="item">
          <h2 id="name">${DOMSelectors.itemname.value}</h2>
-         <img src="${DOMSelectors.imagelink.value}" alt="user entered image">
+         <img src="${DOMSelectors.imagelink.value}" >
          <form action="">
-        <button class="remove">REMOVE</button> 
+            <button class="remove">REMOVE</button> 
         </form>
      </div>`
     );
+    console.log(DOMSelectors.itemname.value, DOMSelectors.imagelink.value);
 }
 function clearfield(){
     DOMSelectors.itemname.value= "";
@@ -26,16 +28,14 @@ DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
     addcard();
     clearfield();
-    element.remove(); // Removes the div with the 'div-02' id
-
-    
-}); 
-DOMSelectors.remove.addEventListener(".remove", function(event){
-    const element = document.getElementsByClassName(".");
+    DOMSelectors.remove.addEventListener(".remove", function(){
+    const element = document.getElementsByClassName(".item");
     while (element.firstChild) {
     element.removeChild(element.firstChild);
 }
 })
+}); 
+
 
 
 
