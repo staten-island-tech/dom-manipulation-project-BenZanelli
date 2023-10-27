@@ -8,14 +8,12 @@ DOMSelectors = {
     parent: document.querySelector(".parent")
 };
 function addcard() {
-    document.querySelector(".parent").insertAdjacentHTML(
+   DOMSelectors.parent.insertAdjacentHTML(
         "beforeend",
         `<div class="item">
          <h2 id="name">${DOMSelectors.itemname.value}</h2>
          <img src="${DOMSelectors.imagelink.value}" >
-         <form action="">
-                <button id="but">REMOVE</button> 
-        </form>
+                <button class="but">REMOVE</button> 
      </div>`
     );
     console.log(DOMSelectors.itemname.value, DOMSelectors.imagelink.value);
@@ -24,14 +22,16 @@ function clearfield(){
     DOMSelectors.itemname.value= "";
     DOMSelectors.imagelink.value= "";
 }
-/* function remove(){
 
-} */
 DOMSelectors.form.addEventListener("submit", function(event) {
     event.preventDefault();
     addcard();
     clearfield();
+    getrid();
 });
-document.getElementById("but").addEventListener("click", function(event){
-    event.preventDefault();
-});
+function getrid(){
+    let buttons = document.querySelectorAll(".but")
+    buttons.forEach((btn)=> btn.addEventListener('click', function(event){
+        btn.parentElement.remove();
+    }))
+} 
