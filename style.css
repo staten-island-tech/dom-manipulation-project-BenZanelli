@@ -2,9 +2,11 @@ html {
     font-size: 23px;
     font-family:"Mooli", Tahoma, sans-serif;
     overflow: auto;
+     background-color: #ebe5d2
+     ;
 }
 .forms {
-    background-color: rgb(34, 209, 142);
+    background-color: #d2691e;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -16,7 +18,7 @@ html {
    justify-content: space-around;
    transition: all .3s;
    border: 3px solid rgb(0, 0, 0);
-    border-radius: 10px;    
+    border-radius: 20px;    
 }
 .submit {
     display: inline-block;
@@ -46,7 +48,7 @@ html {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: #fff;
+    background-color: #ffffff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     appearance: none;
@@ -72,12 +74,12 @@ html {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    background-color: chocolate;
+    background-color: #d2691e;
     justify-content: space-around;
     height: 20%;
     border: 5px solid rgb(0, 0, 0);
     border-radius: 20px;
-    box-shadow: 10px 7px 10px rgb(0, 0, 0);
+    box-shadow: 10px 7px 10px rgb(56, 52, 52);
 }
 .parent {
     display: flex;
