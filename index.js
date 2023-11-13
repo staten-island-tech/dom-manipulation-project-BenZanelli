@@ -12,7 +12,7 @@ function addcard() {
         "beforeend",
         `<div class="item">
          <h2 id="name">${DOMSelectors.itemname.value}</h2>
-         <img src="${DOMSelectors.imagelink.value}" >
+         <img src="${DOMSelectors.imagelink.value}" class="image">
                 <button class="but">REMOVE</button> 
      </div>`
     );
